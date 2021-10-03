@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html class="html1" lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Covid Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img3.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+		<style>
+		body1,html1  {
+				background-image: url("img4.jpg");
+				background-position: center;
+				background-repeat: repeat;
+				background-size: cover;
+				height: 100%;
+				margin: 0;
+
+				}
+				.re1{
+				background-color:white;
+				width:700px;
+				height:60px;
+				}
+				     .results{
+      			font-color:white;
+				align:right;
+				font-size:50px;
+     			 }
+				.safe{
+				font-color:white;
+				font-align:right;
+				font-size:50px;
+				}
+				.danger{
+				font-color:white;
+				align:right;
+				font-size:30px;}
+				h2 {
+				color: #2d5986;
+				}
+	</style>
+
+	</head>
+
+    <body class="body1">
+
+        <!-- Website Title -->
+		<div class="container">
+            <div class='description'>
+    		</div>
+    	</div>
+		</br>
+		</br>
+		</br>
+		</br>
+			</br>
+		</br>
+		</br>
+		</br>
+		<!-- Result -->
+		<div class="re1">
+		<div class="results">
+			{% if prediction==1 %}
+			</br>
+				<span class='danger'>You have COVID</span>
+			{% elif prediction==0 %}
+			</br>
+				<span class='safe'>You DON'T have COVID</span>
+			{% endif %}
+		</div>
+			</div>
+	</body>
+</html>

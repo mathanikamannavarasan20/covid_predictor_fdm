@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img3.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body>
+     <div class="banner">
+          <h1>Covid 19 Detector</h1>
+        </div>
+        <div class="testbox">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <br>
+		<fieldset>
+		<legend>01</legend>
+		<br>
+       <div class="question">
+                    <h3>Choose the symptoms you're experiencing eg.[Y-> 1 or N-> 0]</h3></div>
+		        <br>
+          <div class="question-answer">
+                <div>
+                    <label class="checkbox"><span>Breathing issues</span></label></br>
+                    <input class="box" type="text" name="Breathing">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Fever</span></label></br>
+                    <input class="box" type="text" name="Fever">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Dry Cough</span></label></br>
+                    <input class="box" type="text" name="Dry_Cough">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Sore throat</span></label></br>
+                    <input class="box" type="text" name="Sore_throat">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Running Nose</span></label></br>
+                    <input class="box" type="text" name="Running_Nose">
+                </div>
+                </div>
+
+		</fieldset>
+		</br>
+				</br>
+
+                <fieldset>
+		<legend>02</legend>
+       <div class="question">
+                    <h3>Choose the disease you're suffering from eg.[Y-> 1 or N-> 0]</h3></div>
+		        <br>
+          <div class="question-answer">
+                        <div>
+                    <label class="checkbox"><span>Asthma</span></label></br>
+                    <input class="box" type="text" name="Asthma">
+                        </div>
+                         <div>
+                    <label class="checkbox"><span>Chronic Lung Disease</span></label></br>
+                    <input class="box" type="text" name="Chronic_Lung_Disease">
+                        </div>
+                        <div>
+                    <label class="checkbox"><span>Headache</span></label></br>
+                    <input class="box" type="text" name="Headache">
+                        </div>
+                        <div>
+                    <label class="checkbox"><span>Heart Disease</span></label></br>
+                    <input class="box" type="text" name="Heart_Disease">
+                        </div>
+                        <div>
+                    <label class="checkbox"><span>Diabetes</span></label></br>
+                    <input class="box" type="text" name="Diabetes">
+                        </div>
+                        <div>
+                    <label class="checkbox"><span>Hyper Tension</span></label></br>
+                    <input class="box" type="text" name="Hyper_Tension">
+                        </div>
+                        <div>
+                    <label class="checkbox"><span>Fatigue</span></label></br>
+                    <input class="box" type="text" name="Fatigue">
+                        </div>
+                        <div>
+                    <label class="checkbox"><span>Gastrointestinal</span></label></br>
+                    <input class="box" type="text" name="Gastrointestinal">
+                        </div>
+                           </div>
+
+		</fieldset>
+		</br>
+				</br>
+
+				<fieldset>
+		<legend>03</legend>
+		<br>
+		        <br>
+          <div class="question-answer">
+               <h3>Pandamic Related Genral Question eg.[Y-> 1 or N-> 0]</h3></div>
+                <div>
+                    <label class="checkbox"><span>Do you have Abroad travel</span></label></br>
+                    <input class="box" type="text" name="Abroad_travel">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Are you have Contact with COVID Patient?</span></label></br>
+                    <input class="box" type="text" name="Contact_COVID_Patient">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Are you have Attended Large Gathering?</span></label></br>
+                    <input class="box" type="text" name="Attended_Large_Gathering">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Are you have Visited Public Exposed Places?</span></label></br>
+                    <input class="box" type="text" name="Visited_Public_Exposed_Places">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Is your Family working in Public Exposed Places?</span></label></br>
+                    <input class="box" type="text" name="Family_working_Public_Exposed_Places">
+                </div>
+                <div>
+                    <label class="checkbox"><span>Are you Wearing Masks?</span></label></br>
+                    <input class="box" type="text" name="Wearing_Masks">
+                </div>
+				<div>
+                    <label class="checkbox"><span>Are you use Sanitization from Market?</span></label></br>
+                    <input class="box" type="text" name="Sanitization_Market">
+                </div>
+		</fieldset>
+		</br>
+				</br>
+                </br>
+                </br>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+
+    </body>
+</html>
