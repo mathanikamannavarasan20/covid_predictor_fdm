@@ -3,6 +3,9 @@
 	  background-attachment: fixed;
       min-height: 100%;
       }
+      .box{
+      width: 50px;
+      height: 10px}
 	  .banner {
 
       position: relative;
